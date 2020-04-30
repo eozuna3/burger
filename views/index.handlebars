@@ -15,15 +15,19 @@
 
   <div class="row py-2">
     <div class="col-md-6" id="undevouredBurgers">
-      <!--<ul>
         {{#each burgers}}
           {{#unless devoured}}
-          <span id="{{id}}" class="p-3 my-2 bg-secondary text-dark">{{id}}. {{burger_name}}</span>
+          <div class="row">
+            <span id="burgerName{{id}}" class="p-2 m-2 bg-secondary text-white">{{id}}. {{burger_name}}
+            </span>
+            <button class="btn btn-danger m-2" id="individualDevouredBtn{{id}}">Devour It!</button>
+          </div>
           {{/unless}}
         {{/each}}
-      </ul>-->
     </div>
-    <div class="col-md-6" id="devouredBurgers">
+    <div class="col-md-4" id="devouredBtns">
+    </div>
+    <div class="col-md-4" id="devouredBurgers">
     </div>
   </div>
 
