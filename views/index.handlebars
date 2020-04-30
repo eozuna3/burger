@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2 text-center py-4">
+      <img src="assets\img\burger.png" class="img-fluid" alt="burger image">
+    </div>
+    <div class="col-md-5"></div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-12 text-center">
+      <h1 class="text-center">Eat-Da-Burger!</h1>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-6" id="undevouredBurgers">
+      <!--<ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+          <span id="{{id}}" class="p-3 my-2 bg-secondary text-dark">{{id}}. {{burger_name}}</span>
+          {{/unless}}
+        {{/each}}
+      </ul>-->
+    </div>
+    <div class="col-md-6" id="devouredBurgers">
+    </div>
+  </div>
+
+  <div class="row pt-2">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+      <form>
+
+        <div class="form-group">
+          <label for="burgerName"></label>
+          <textarea class="form-control" id="burgerName" rows="3"></textarea>
+        </div>
+
+        <button class="btn btn-primary mb-2" type="submit">Submit</button>
+      </form>
+      <p>Enter a burger you want to eat then Click the "Submit" button.</p>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

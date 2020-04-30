@@ -2,7 +2,15 @@
 var connection = require("../config/connection.js");
 
 var orm = {
-  selectAll: function(tableInput, cb) {
+  selectAll: function(tableName, cb) {
+    var queryString = "SELECT * FROM " + tableName + ";";
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   },
   
   insertOne: function(table, cols, vals, cb) {  
