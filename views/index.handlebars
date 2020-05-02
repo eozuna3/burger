@@ -14,20 +14,26 @@
   </div>
 
   <div class="row py-2">
-    <div class="col-md-6" id="undevouredBurgers">
+    <div class="col-md-6 justify-content-center" id="undevouredBurgers">
         {{#each burgers}}
           {{#unless devoured}}
           <div class="row">
             <span id="burgerName{{id}}" class="p-2 m-2 bg-secondary text-white">{{id}}. {{burger_name}}
             </span>
-            <button class="btn btn-danger m-2" id="individualDevouredBtn{{id}}">Devour It!</button>
+            <button class="btn btn-danger m-2" id="devouredBtn{{id}}" data-id="{{id}}">Devour It!</button>
           </div>
           {{/unless}}
         {{/each}}
     </div>
-    <div class="col-md-4" id="devouredBtns">
-    </div>
-    <div class="col-md-4" id="devouredBurgers">
+    <div class="col-md-6" id="devouredBurgers">
+      {{#each burgers}}
+          {{#if devoured}}
+          <div class="row disabled">
+            <span id="burgerName{{id}}" class="p-2 m-2 bg-secondary text-white">{{id}}. {{burger_name}}
+            </span>
+          </div>
+          {{/if}}
+        {{/each}}
     </div>
   </div>
 
@@ -41,7 +47,7 @@
           <textarea class="form-control" id="burgerName" rows="3"></textarea>
         </div>
 
-        <button class="btn btn-primary mb-2" type="submit">Submit</button>
+        <button id="createBurgerBtn" class="btn btn-primary mb-2">Submit</button>
       </form>
       <p>Enter a burger you want to eat then Click the "Submit" button.</p>
     </div>
