@@ -56,14 +56,14 @@ This application uses a server.js javascript files that creates a server using e
 ### Using the application
 To use the application please go the deployed website below at Heroku.
 
-  [Heroku Link](https://blooming-scrubland-03101.herokuapp.com/)
+  [Heroku Link](https://cryptic-caverns-04713.herokuapp.com/)
 
 When you first git on the website it will take you to the home page.  Screenshot is shown below.
 
 
-  ![Image of screenshot](images/FF-1.png)
+  ![Image of screenshot](images/burgersh.png)
 
-It has 2 links at the bottom of the page.  The Github Repo link will send you Github respository for the code.  The API Friends List link will out the array of friends and users that have used the website in a JSON format as noted below.
+You will see a text box in which the user can input in anytype of burger they wish.  Below the text box is submit button.  Once the user enters a burger and hits the submit button the 
 
   ![Image of screenshot](images/FF-2.png)
 
