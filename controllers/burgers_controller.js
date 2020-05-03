@@ -1,10 +1,9 @@
+//  Dependencies
 var express = require("express");
-
 var router = express.Router();
-
-// Import the model (cat.js) to use its database functions.
 var burger = require("../models/burger.js");
 
+//  Route for getting all the objects
 router.get("/", function(req, res) {
   burger.selectAll(function(data){
     var allBurgersObject = {
@@ -15,6 +14,7 @@ router.get("/", function(req, res) {
   });
 });
 
+// Route for creating a new row in the database based on the user input
 router.post("/api/burgers", function(req, res) {
   console.log(req.body);
   burger.insertOne([
@@ -26,16 +26,13 @@ router.post("/api/burgers", function(req, res) {
   });
 });
 
+// Route for updating the devoured state of the selected burger
 router.put("/api/cats/:id", function(req, res) {
+  var burgerState = true;
   var idOfDevouredBurger = "id = " + req.params.id;
 
-  console.log("condition", condition);
-
-  burger.updateOne({
-    sleepy: req.body.sleepy
-  }, condition, function(result) {
+  burger.updateOne(burgerState, idOfDevouredBurger, function(result) {
     if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
       res.status(200).end();

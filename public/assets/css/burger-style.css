@@ -7,3 +7,8 @@ body {
 h1 {
   color: red;
 }
+
+span.devoured{
+     background-color:#e9ecef;
+     color: #6c757d;
+  }

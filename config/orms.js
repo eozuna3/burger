@@ -1,6 +1,6 @@
-// Import MySQL connection.
 var connection = require("../config/connection.js");
 
+//  Function that creates question marks for the insert query to work
 function createQuestionMarks(num) {
   var arr = [];
 
@@ -12,6 +12,7 @@ function createQuestionMarks(num) {
 }
 
 var orm = {
+  //  SQL query to return all the information in the burger table
   selectAll: function(tableName, cb) {
     var queryString = "SELECT * FROM " + tableName + ";";
     console.log(queryString);
@@ -23,6 +24,7 @@ var orm = {
     });
   },
   
+  //  SQL query create a new row in the burger table for the information entered by the user from the form
   insertOne: function(table, cols, vals, cb) {  
     var queryString = "INSERT INTO " + table;
 
@@ -45,8 +47,23 @@ var orm = {
   },
   
   
-  // An example of objColVals would be {name: panther, sleepy: true}
-  updateOne: function(table, objColVals, condition, cb) {
+  // SQL query to update a record in the table
+  updateOne: function(table, burgerState, idOfDevouredBurger, cb) {
+    var queryString = "UPDATE " + table;
+
+    queryString += " SET ";
+    queryString += "devoured = " + burgerState;
+    queryString += " WHERE ";
+    queryString += idOfDevouredBurger;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   },
 };
 

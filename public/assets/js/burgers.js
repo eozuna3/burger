@@ -18,21 +18,21 @@ $(function () {
     });
   });
 
-  $(".change-sleep").on("click", function(event) {
-    var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
-
-    var newSleepState = {
-      sleepy: newSleep
+  //  Devour button function to update the devoured value of the record referred to by the button
+  $(".devouredBtn").on("click", function(event) {
+    var burgerId = $(this).data("id");
+    
+    var burgerObject = {
+      burgerState: $(this).data("state")
     };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/cats/" + burgerId, {
       type: "PUT",
-      data: newSleepState
+      data: burgerObject
     }).then(
       function() {
-        console.log("changed sleep to", newSleep);
+        console.log("changed sleep to devoured");
         // Reload the page to get the updated list
         location.reload();
       }
