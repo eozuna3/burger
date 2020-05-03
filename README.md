@@ -5,7 +5,8 @@ This application uses Node, Express, SQL database, and Express-handlebars to cre
 
 ### How the application is organized
 * The folder structure for the website is detailed below:
-  ```burger
+```
+burger
 ├── config
 │   ├── connection.js
 │   └── orm.js
@@ -39,7 +40,8 @@ This application uses Node, Express, SQL database, and Express-handlebars to cre
 └── views
     ├── index.handlebars
     └── layouts
-        └── main.handlebars ```
+        └── main.handlebars 
+```
 
 This application uses a server.js javascript files that creates a server using express.  The config folder holds 2 javascript files, one of which makes a connection to database and one which querys the database to perform CRUD commands on the database.  The controllers folder holds a javascript file that contains the routers for the server.  The db file holds the schema and seed files for creating the associated database.  The models folder holds a javascript file that links the server to the database.  The views folder holds all of the handlebars html for creating the front-end of the website.  Finally the public folder has the images and CSS for the front-end of the website.  It also has the javascript responsible for sending information from the front-end to the server.
 
