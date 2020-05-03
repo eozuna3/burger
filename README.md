@@ -61,25 +61,16 @@ To use the application please go the deployed website below at Heroku.
 When you first git on the website it will take you to the home page.  Screenshot is shown below.
 
 
-  ![Image of screenshot](images/burgersh.png)
+  ![Image of screenshot](public/assets/img/burgersh.png)
 
-You will see a text box in which the user can input in anytype of burger they wish.  Below the text box is submit button.  Once the user enters a burger and hits the submit button the 
+You will see a text box in which the user can input in anytype of burger they wish.  Below the text box is submit button.  Once the user enters a burger and hits the submit button the newly entered burger appears on the left side of the screen along with an associated devour button as seen below.
 
-  ![Image of screenshot](images/FF-2.png)
+  ![Image of screenshot](public/assets/img/burger1.png)
 
-The user can then click on the Go to Survey link which will send them to the survey page to fill out a form about themselves with a list of server questions.
+If the user decides to hit a devour button then the devour button along with its associated burger is removed from the left side of the screen and appears on the right as the burger has now been devoured.
 
-  ![Image of screenshot](images/FF-3.png)
-
-All of the text boxes and questions need to be completed otherwise when the user hits submits nothing is submitted and user to notified to complete the form first.
-
-  ![Image of screenshot](images/FF-4.png)
-
-
-Once the user completes all the information in the form, then the website will submit the information to the server which determines the *Best Match* for the current user from previous users and returns back the information on the *Best Match* which the website will then use to display the name and image of the match as seen below.
-
-  ![Image of screenshot](images/FF-5.png)
+  ![Image of screenshot](public/assets/img/burger2.png)
 
 ### Links associated with the application
 1.  Link to git hub repository for this app:  [Github Link](https://github.com/eozuna3/burger)
-2.  Link to deployed heroku website:  [Heroku Link](https://blooming-scrubland-03101.herokuapp.com/)
+2.  Link to deployed heroku website:  [Heroku Link](https://cryptic-caverns-04713.herokuapp.com/)
